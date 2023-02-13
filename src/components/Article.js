@@ -1,16 +1,11 @@
 import './Article.css';
 
-function Article() {
+function Article(props) {
   return (
     <article>
-      <h2>Titre</h2>
-      <p>Auteur - <i>Date</i></p>
-      <section>
-        <p>Contenu</p>
-        <p>Contenu A</p>
-        <p>Contenu B</p>
-        <p>Contenu C</p>
-      </section>
+      <h2>{props.titre}</h2>
+      <p>{props.auteur} - <i>{props.date}</i></p>
+      {props.children}
     </article>
   );
 }
